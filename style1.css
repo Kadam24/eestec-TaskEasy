@@ -1,0 +1,44 @@
+h1 {
+    background-color: green;
+    padding: 10px;
+    border: 1px dashed blue;
+    margin: 10px 20px;
+}
+/*top->right->bottom->left (clockwise)*/
+
+body {
+    margin: 0;
+}
+
+#content {
+    width: 50%;
+    background: green;
+    color: white;
+    padding: 12px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#content::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+#left {
+    background: blue;
+    float: left;
+}
+
+#right {
+    background: cyan;
+}
+
+#left, #right {
+    width: 50%;
+    display: inline-block;
+    font-size: 48px;
+}
